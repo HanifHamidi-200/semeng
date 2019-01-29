@@ -1,0 +1,10 @@
+C:\Users\hanif\Desktop\semeng\PRETN\bin\Debug\PRETN.exe.config
+C:\Users\hanif\Desktop\semeng\PRETN\bin\Debug\PRETN.exe
+C:\Users\hanif\Desktop\semeng\PRETN\bin\Debug\PRETN.pdb
+C:\Users\hanif\Desktop\semeng\PRETN\obj\Debug\PRETN.csprojAssemblyReference.cache
+C:\Users\hanif\Desktop\semeng\PRETN\obj\Debug\PRETN.Form1.resources
+C:\Users\hanif\Desktop\semeng\PRETN\obj\Debug\PRETN.Properties.Resources.resources
+C:\Users\hanif\Desktop\semeng\PRETN\obj\Debug\PRETN.csproj.GenerateResource.cache
+C:\Users\hanif\Desktop\semeng\PRETN\obj\Debug\PRETN.csproj.CoreCompileInputs.cache
+C:\Users\hanif\Desktop\semeng\PRETN\obj\Debug\PRETN.exe
+C:\Users\hanif\Desktop\semeng\PRETN\obj\Debug\PRETN.pdb
