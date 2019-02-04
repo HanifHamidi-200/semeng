@@ -95,6 +95,8 @@
             this.pic31 = new System.Windows.Forms.PictureBox();
             this.pic21 = new System.Windows.Forms.PictureBox();
             this.pic11 = new System.Windows.Forms.PictureBox();
+            this.btnNavClockwise = new System.Windows.Forms.Button();
+            this.btnNavAnticlockwise = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic88)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic78)).BeginInit();
@@ -171,6 +173,7 @@
             this.btnQNext.TabIndex = 10;
             this.btnQNext.Text = "&QNext";
             this.btnQNext.UseVisualStyleBackColor = false;
+            this.btnQNext.Click += new System.EventHandler(this.BtnQNext_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -902,15 +905,40 @@
             this.pic11.TabIndex = 0;
             this.pic11.TabStop = false;
             // 
+            // btnNavClockwise
+            // 
+            this.btnNavClockwise.BackColor = System.Drawing.Color.Yellow;
+            this.btnNavClockwise.Location = new System.Drawing.Point(486, 134);
+            this.btnNavClockwise.Name = "btnNavClockwise";
+            this.btnNavClockwise.Size = new System.Drawing.Size(57, 53);
+            this.btnNavClockwise.TabIndex = 11;
+            this.btnNavClockwise.Text = "<-C";
+            this.btnNavClockwise.UseVisualStyleBackColor = false;
+            this.btnNavClockwise.Click += new System.EventHandler(this.BtnNavClockwise_Click);
+            // 
+            // btnNavAnticlockwise
+            // 
+            this.btnNavAnticlockwise.BackColor = System.Drawing.Color.Yellow;
+            this.btnNavAnticlockwise.Location = new System.Drawing.Point(549, 134);
+            this.btnNavAnticlockwise.Name = "btnNavAnticlockwise";
+            this.btnNavAnticlockwise.Size = new System.Drawing.Size(57, 53);
+            this.btnNavAnticlockwise.TabIndex = 12;
+            this.btnNavAnticlockwise.Text = "AC->";
+            this.btnNavAnticlockwise.UseVisualStyleBackColor = false;
+            this.btnNavAnticlockwise.Click += new System.EventHandler(this.BtnNavAnticlockwise_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnNavAnticlockwise);
+            this.Controls.Add(this.btnNavClockwise);
             this.Controls.Add(this.btnQNext);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
             this.Text = "PRETN";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic88)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic78)).EndInit();
@@ -1048,6 +1076,8 @@
         private System.Windows.Forms.PictureBox pic31;
         private System.Windows.Forms.PictureBox pic21;
         private System.Windows.Forms.PictureBox pic11;
+        private System.Windows.Forms.Button btnNavClockwise;
+        private System.Windows.Forms.Button btnNavAnticlockwise;
     }
 }
 
