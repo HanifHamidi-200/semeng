@@ -84,6 +84,7 @@
     <Content Include="icons1\F bloodspill.png" />
     <Content Include="icons1\F empty.png" />
     <Content Include="icons1\F KnobsDescription.png" />
+    <Content Include="icons1\F mask.png" />
     <Content Include="icons1\F NullGate.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -95,8 +95,8 @@
             this.pic31 = new System.Windows.Forms.PictureBox();
             this.pic21 = new System.Windows.Forms.PictureBox();
             this.pic11 = new System.Windows.Forms.PictureBox();
-            this.btnNavClockwise = new System.Windows.Forms.Button();
-            this.btnNavAnticlockwise = new System.Windows.Forms.Button();
+            this.btnNav1 = new System.Windows.Forms.Button();
+            this.btnNav2 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic88)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic78)).BeginInit();
@@ -186,7 +186,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 56F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 48F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 55F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 57F));
             this.tableLayoutPanel1.Controls.Add(this.pic88, 7, 7);
             this.tableLayoutPanel1.Controls.Add(this.pic78, 6, 7);
             this.tableLayoutPanel1.Controls.Add(this.pic68, 5, 7);
@@ -264,11 +264,12 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(417, 401);
             this.tableLayoutPanel1.TabIndex = 9;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.TableLayoutPanel1_Paint);
             // 
             // pic88
             // 
             this.pic88.Image = ((System.Drawing.Image)(resources.GetObject("pic88.Image")));
-            this.pic88.Location = new System.Drawing.Point(364, 359);
+            this.pic88.Location = new System.Drawing.Point(362, 359);
             this.pic88.Name = "pic88";
             this.pic88.Size = new System.Drawing.Size(37, 39);
             this.pic88.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -278,7 +279,7 @@
             // pic78
             // 
             this.pic78.Image = ((System.Drawing.Image)(resources.GetObject("pic78.Image")));
-            this.pic78.Location = new System.Drawing.Point(316, 359);
+            this.pic78.Location = new System.Drawing.Point(314, 359);
             this.pic78.Name = "pic78";
             this.pic78.Size = new System.Drawing.Size(37, 39);
             this.pic78.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -288,7 +289,7 @@
             // pic68
             // 
             this.pic68.Image = ((System.Drawing.Image)(resources.GetObject("pic68.Image")));
-            this.pic68.Location = new System.Drawing.Point(260, 359);
+            this.pic68.Location = new System.Drawing.Point(258, 359);
             this.pic68.Name = "pic68";
             this.pic68.Size = new System.Drawing.Size(37, 39);
             this.pic68.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -298,7 +299,7 @@
             // pic58
             // 
             this.pic58.Image = ((System.Drawing.Image)(resources.GetObject("pic58.Image")));
-            this.pic58.Location = new System.Drawing.Point(205, 359);
+            this.pic58.Location = new System.Drawing.Point(203, 359);
             this.pic58.Name = "pic58";
             this.pic58.Size = new System.Drawing.Size(37, 39);
             this.pic58.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -308,7 +309,7 @@
             // pic48
             // 
             this.pic48.Image = ((System.Drawing.Image)(resources.GetObject("pic48.Image")));
-            this.pic48.Location = new System.Drawing.Point(142, 359);
+            this.pic48.Location = new System.Drawing.Point(140, 359);
             this.pic48.Name = "pic48";
             this.pic48.Size = new System.Drawing.Size(37, 39);
             this.pic48.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -318,7 +319,7 @@
             // pic38
             // 
             this.pic38.Image = ((System.Drawing.Image)(resources.GetObject("pic38.Image")));
-            this.pic38.Location = new System.Drawing.Point(82, 359);
+            this.pic38.Location = new System.Drawing.Point(80, 359);
             this.pic38.Name = "pic38";
             this.pic38.Size = new System.Drawing.Size(37, 39);
             this.pic38.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -328,9 +329,9 @@
             // pic28
             // 
             this.pic28.Image = ((System.Drawing.Image)(resources.GetObject("pic28.Image")));
-            this.pic28.Location = new System.Drawing.Point(42, 359);
+            this.pic28.Location = new System.Drawing.Point(41, 359);
             this.pic28.Name = "pic28";
-            this.pic28.Size = new System.Drawing.Size(34, 39);
+            this.pic28.Size = new System.Drawing.Size(33, 39);
             this.pic28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic28.TabIndex = 57;
             this.pic28.TabStop = false;
@@ -340,7 +341,7 @@
             this.pic18.Image = ((System.Drawing.Image)(resources.GetObject("pic18.Image")));
             this.pic18.Location = new System.Drawing.Point(3, 359);
             this.pic18.Name = "pic18";
-            this.pic18.Size = new System.Drawing.Size(33, 39);
+            this.pic18.Size = new System.Drawing.Size(32, 39);
             this.pic18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic18.TabIndex = 56;
             this.pic18.TabStop = false;
@@ -348,7 +349,7 @@
             // pic87
             // 
             this.pic87.Image = ((System.Drawing.Image)(resources.GetObject("pic87.Image")));
-            this.pic87.Location = new System.Drawing.Point(364, 306);
+            this.pic87.Location = new System.Drawing.Point(362, 306);
             this.pic87.Name = "pic87";
             this.pic87.Size = new System.Drawing.Size(37, 45);
             this.pic87.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -358,7 +359,7 @@
             // pic77
             // 
             this.pic77.Image = ((System.Drawing.Image)(resources.GetObject("pic77.Image")));
-            this.pic77.Location = new System.Drawing.Point(316, 306);
+            this.pic77.Location = new System.Drawing.Point(314, 306);
             this.pic77.Name = "pic77";
             this.pic77.Size = new System.Drawing.Size(37, 45);
             this.pic77.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -368,7 +369,7 @@
             // pic67
             // 
             this.pic67.Image = ((System.Drawing.Image)(resources.GetObject("pic67.Image")));
-            this.pic67.Location = new System.Drawing.Point(260, 306);
+            this.pic67.Location = new System.Drawing.Point(258, 306);
             this.pic67.Name = "pic67";
             this.pic67.Size = new System.Drawing.Size(37, 45);
             this.pic67.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -378,7 +379,7 @@
             // pic57
             // 
             this.pic57.Image = ((System.Drawing.Image)(resources.GetObject("pic57.Image")));
-            this.pic57.Location = new System.Drawing.Point(205, 306);
+            this.pic57.Location = new System.Drawing.Point(203, 306);
             this.pic57.Name = "pic57";
             this.pic57.Size = new System.Drawing.Size(37, 45);
             this.pic57.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -388,7 +389,7 @@
             // pic47
             // 
             this.pic47.Image = ((System.Drawing.Image)(resources.GetObject("pic47.Image")));
-            this.pic47.Location = new System.Drawing.Point(142, 306);
+            this.pic47.Location = new System.Drawing.Point(140, 306);
             this.pic47.Name = "pic47";
             this.pic47.Size = new System.Drawing.Size(37, 45);
             this.pic47.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -398,7 +399,7 @@
             // pic37
             // 
             this.pic37.Image = ((System.Drawing.Image)(resources.GetObject("pic37.Image")));
-            this.pic37.Location = new System.Drawing.Point(82, 306);
+            this.pic37.Location = new System.Drawing.Point(80, 306);
             this.pic37.Name = "pic37";
             this.pic37.Size = new System.Drawing.Size(37, 45);
             this.pic37.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -408,9 +409,9 @@
             // pic27
             // 
             this.pic27.Image = ((System.Drawing.Image)(resources.GetObject("pic27.Image")));
-            this.pic27.Location = new System.Drawing.Point(42, 306);
+            this.pic27.Location = new System.Drawing.Point(41, 306);
             this.pic27.Name = "pic27";
-            this.pic27.Size = new System.Drawing.Size(34, 45);
+            this.pic27.Size = new System.Drawing.Size(33, 45);
             this.pic27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic27.TabIndex = 49;
             this.pic27.TabStop = false;
@@ -420,7 +421,7 @@
             this.pic17.Image = ((System.Drawing.Image)(resources.GetObject("pic17.Image")));
             this.pic17.Location = new System.Drawing.Point(3, 306);
             this.pic17.Name = "pic17";
-            this.pic17.Size = new System.Drawing.Size(33, 45);
+            this.pic17.Size = new System.Drawing.Size(32, 45);
             this.pic17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic17.TabIndex = 48;
             this.pic17.TabStop = false;
@@ -428,7 +429,7 @@
             // pic86
             // 
             this.pic86.Image = ((System.Drawing.Image)(resources.GetObject("pic86.Image")));
-            this.pic86.Location = new System.Drawing.Point(364, 254);
+            this.pic86.Location = new System.Drawing.Point(362, 254);
             this.pic86.Name = "pic86";
             this.pic86.Size = new System.Drawing.Size(37, 45);
             this.pic86.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -438,7 +439,7 @@
             // pic76
             // 
             this.pic76.Image = ((System.Drawing.Image)(resources.GetObject("pic76.Image")));
-            this.pic76.Location = new System.Drawing.Point(316, 254);
+            this.pic76.Location = new System.Drawing.Point(314, 254);
             this.pic76.Name = "pic76";
             this.pic76.Size = new System.Drawing.Size(37, 45);
             this.pic76.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -448,7 +449,7 @@
             // pic66
             // 
             this.pic66.Image = ((System.Drawing.Image)(resources.GetObject("pic66.Image")));
-            this.pic66.Location = new System.Drawing.Point(260, 254);
+            this.pic66.Location = new System.Drawing.Point(258, 254);
             this.pic66.Name = "pic66";
             this.pic66.Size = new System.Drawing.Size(37, 45);
             this.pic66.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -458,7 +459,7 @@
             // pic56
             // 
             this.pic56.Image = ((System.Drawing.Image)(resources.GetObject("pic56.Image")));
-            this.pic56.Location = new System.Drawing.Point(205, 254);
+            this.pic56.Location = new System.Drawing.Point(203, 254);
             this.pic56.Name = "pic56";
             this.pic56.Size = new System.Drawing.Size(37, 45);
             this.pic56.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -468,7 +469,7 @@
             // pic46
             // 
             this.pic46.Image = ((System.Drawing.Image)(resources.GetObject("pic46.Image")));
-            this.pic46.Location = new System.Drawing.Point(142, 254);
+            this.pic46.Location = new System.Drawing.Point(140, 254);
             this.pic46.Name = "pic46";
             this.pic46.Size = new System.Drawing.Size(37, 45);
             this.pic46.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -478,7 +479,7 @@
             // pic36
             // 
             this.pic36.Image = ((System.Drawing.Image)(resources.GetObject("pic36.Image")));
-            this.pic36.Location = new System.Drawing.Point(82, 254);
+            this.pic36.Location = new System.Drawing.Point(80, 254);
             this.pic36.Name = "pic36";
             this.pic36.Size = new System.Drawing.Size(37, 45);
             this.pic36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -488,9 +489,9 @@
             // pic26
             // 
             this.pic26.Image = ((System.Drawing.Image)(resources.GetObject("pic26.Image")));
-            this.pic26.Location = new System.Drawing.Point(42, 254);
+            this.pic26.Location = new System.Drawing.Point(41, 254);
             this.pic26.Name = "pic26";
-            this.pic26.Size = new System.Drawing.Size(34, 45);
+            this.pic26.Size = new System.Drawing.Size(33, 45);
             this.pic26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic26.TabIndex = 41;
             this.pic26.TabStop = false;
@@ -500,7 +501,7 @@
             this.pic16.Image = ((System.Drawing.Image)(resources.GetObject("pic16.Image")));
             this.pic16.Location = new System.Drawing.Point(3, 254);
             this.pic16.Name = "pic16";
-            this.pic16.Size = new System.Drawing.Size(33, 45);
+            this.pic16.Size = new System.Drawing.Size(32, 45);
             this.pic16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic16.TabIndex = 40;
             this.pic16.TabStop = false;
@@ -508,7 +509,7 @@
             // pic85
             // 
             this.pic85.Image = ((System.Drawing.Image)(resources.GetObject("pic85.Image")));
-            this.pic85.Location = new System.Drawing.Point(364, 209);
+            this.pic85.Location = new System.Drawing.Point(362, 209);
             this.pic85.Name = "pic85";
             this.pic85.Size = new System.Drawing.Size(37, 39);
             this.pic85.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -518,7 +519,7 @@
             // pic75
             // 
             this.pic75.Image = ((System.Drawing.Image)(resources.GetObject("pic75.Image")));
-            this.pic75.Location = new System.Drawing.Point(316, 209);
+            this.pic75.Location = new System.Drawing.Point(314, 209);
             this.pic75.Name = "pic75";
             this.pic75.Size = new System.Drawing.Size(37, 39);
             this.pic75.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -528,7 +529,7 @@
             // pic65
             // 
             this.pic65.Image = ((System.Drawing.Image)(resources.GetObject("pic65.Image")));
-            this.pic65.Location = new System.Drawing.Point(260, 209);
+            this.pic65.Location = new System.Drawing.Point(258, 209);
             this.pic65.Name = "pic65";
             this.pic65.Size = new System.Drawing.Size(37, 39);
             this.pic65.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -538,7 +539,7 @@
             // pic55
             // 
             this.pic55.Image = ((System.Drawing.Image)(resources.GetObject("pic55.Image")));
-            this.pic55.Location = new System.Drawing.Point(205, 209);
+            this.pic55.Location = new System.Drawing.Point(203, 209);
             this.pic55.Name = "pic55";
             this.pic55.Size = new System.Drawing.Size(37, 39);
             this.pic55.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -548,7 +549,7 @@
             // pic45
             // 
             this.pic45.Image = ((System.Drawing.Image)(resources.GetObject("pic45.Image")));
-            this.pic45.Location = new System.Drawing.Point(142, 209);
+            this.pic45.Location = new System.Drawing.Point(140, 209);
             this.pic45.Name = "pic45";
             this.pic45.Size = new System.Drawing.Size(37, 39);
             this.pic45.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -558,7 +559,7 @@
             // pic35
             // 
             this.pic35.Image = ((System.Drawing.Image)(resources.GetObject("pic35.Image")));
-            this.pic35.Location = new System.Drawing.Point(82, 209);
+            this.pic35.Location = new System.Drawing.Point(80, 209);
             this.pic35.Name = "pic35";
             this.pic35.Size = new System.Drawing.Size(37, 39);
             this.pic35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -568,9 +569,9 @@
             // pic25
             // 
             this.pic25.Image = ((System.Drawing.Image)(resources.GetObject("pic25.Image")));
-            this.pic25.Location = new System.Drawing.Point(42, 209);
+            this.pic25.Location = new System.Drawing.Point(41, 209);
             this.pic25.Name = "pic25";
-            this.pic25.Size = new System.Drawing.Size(34, 39);
+            this.pic25.Size = new System.Drawing.Size(33, 39);
             this.pic25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic25.TabIndex = 33;
             this.pic25.TabStop = false;
@@ -580,7 +581,7 @@
             this.pic15.Image = ((System.Drawing.Image)(resources.GetObject("pic15.Image")));
             this.pic15.Location = new System.Drawing.Point(3, 209);
             this.pic15.Name = "pic15";
-            this.pic15.Size = new System.Drawing.Size(33, 39);
+            this.pic15.Size = new System.Drawing.Size(32, 39);
             this.pic15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic15.TabIndex = 32;
             this.pic15.TabStop = false;
@@ -588,7 +589,7 @@
             // pic84
             // 
             this.pic84.Image = ((System.Drawing.Image)(resources.GetObject("pic84.Image")));
-            this.pic84.Location = new System.Drawing.Point(364, 150);
+            this.pic84.Location = new System.Drawing.Point(362, 150);
             this.pic84.Name = "pic84";
             this.pic84.Size = new System.Drawing.Size(37, 45);
             this.pic84.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -598,7 +599,7 @@
             // pic74
             // 
             this.pic74.Image = ((System.Drawing.Image)(resources.GetObject("pic74.Image")));
-            this.pic74.Location = new System.Drawing.Point(316, 150);
+            this.pic74.Location = new System.Drawing.Point(314, 150);
             this.pic74.Name = "pic74";
             this.pic74.Size = new System.Drawing.Size(37, 45);
             this.pic74.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -608,7 +609,7 @@
             // pic64
             // 
             this.pic64.Image = ((System.Drawing.Image)(resources.GetObject("pic64.Image")));
-            this.pic64.Location = new System.Drawing.Point(260, 150);
+            this.pic64.Location = new System.Drawing.Point(258, 150);
             this.pic64.Name = "pic64";
             this.pic64.Size = new System.Drawing.Size(37, 45);
             this.pic64.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -618,7 +619,7 @@
             // pic54
             // 
             this.pic54.Image = ((System.Drawing.Image)(resources.GetObject("pic54.Image")));
-            this.pic54.Location = new System.Drawing.Point(205, 150);
+            this.pic54.Location = new System.Drawing.Point(203, 150);
             this.pic54.Name = "pic54";
             this.pic54.Size = new System.Drawing.Size(37, 45);
             this.pic54.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -628,7 +629,7 @@
             // pic44
             // 
             this.pic44.Image = ((System.Drawing.Image)(resources.GetObject("pic44.Image")));
-            this.pic44.Location = new System.Drawing.Point(142, 150);
+            this.pic44.Location = new System.Drawing.Point(140, 150);
             this.pic44.Name = "pic44";
             this.pic44.Size = new System.Drawing.Size(37, 45);
             this.pic44.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -638,7 +639,7 @@
             // pic34
             // 
             this.pic34.Image = ((System.Drawing.Image)(resources.GetObject("pic34.Image")));
-            this.pic34.Location = new System.Drawing.Point(82, 150);
+            this.pic34.Location = new System.Drawing.Point(80, 150);
             this.pic34.Name = "pic34";
             this.pic34.Size = new System.Drawing.Size(37, 45);
             this.pic34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -648,9 +649,9 @@
             // pic24
             // 
             this.pic24.Image = ((System.Drawing.Image)(resources.GetObject("pic24.Image")));
-            this.pic24.Location = new System.Drawing.Point(42, 150);
+            this.pic24.Location = new System.Drawing.Point(41, 150);
             this.pic24.Name = "pic24";
-            this.pic24.Size = new System.Drawing.Size(34, 45);
+            this.pic24.Size = new System.Drawing.Size(33, 45);
             this.pic24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic24.TabIndex = 25;
             this.pic24.TabStop = false;
@@ -660,7 +661,7 @@
             this.pic14.Image = ((System.Drawing.Image)(resources.GetObject("pic14.Image")));
             this.pic14.Location = new System.Drawing.Point(3, 150);
             this.pic14.Name = "pic14";
-            this.pic14.Size = new System.Drawing.Size(33, 45);
+            this.pic14.Size = new System.Drawing.Size(32, 45);
             this.pic14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic14.TabIndex = 24;
             this.pic14.TabStop = false;
@@ -668,7 +669,7 @@
             // pic83
             // 
             this.pic83.Image = ((System.Drawing.Image)(resources.GetObject("pic83.Image")));
-            this.pic83.Location = new System.Drawing.Point(364, 108);
+            this.pic83.Location = new System.Drawing.Point(362, 108);
             this.pic83.Name = "pic83";
             this.pic83.Size = new System.Drawing.Size(37, 36);
             this.pic83.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -678,7 +679,7 @@
             // pic73
             // 
             this.pic73.Image = ((System.Drawing.Image)(resources.GetObject("pic73.Image")));
-            this.pic73.Location = new System.Drawing.Point(316, 108);
+            this.pic73.Location = new System.Drawing.Point(314, 108);
             this.pic73.Name = "pic73";
             this.pic73.Size = new System.Drawing.Size(37, 36);
             this.pic73.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -688,7 +689,7 @@
             // pic63
             // 
             this.pic63.Image = ((System.Drawing.Image)(resources.GetObject("pic63.Image")));
-            this.pic63.Location = new System.Drawing.Point(260, 108);
+            this.pic63.Location = new System.Drawing.Point(258, 108);
             this.pic63.Name = "pic63";
             this.pic63.Size = new System.Drawing.Size(37, 36);
             this.pic63.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -698,7 +699,7 @@
             // pic53
             // 
             this.pic53.Image = ((System.Drawing.Image)(resources.GetObject("pic53.Image")));
-            this.pic53.Location = new System.Drawing.Point(205, 108);
+            this.pic53.Location = new System.Drawing.Point(203, 108);
             this.pic53.Name = "pic53";
             this.pic53.Size = new System.Drawing.Size(37, 36);
             this.pic53.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -708,7 +709,7 @@
             // pic43
             // 
             this.pic43.Image = ((System.Drawing.Image)(resources.GetObject("pic43.Image")));
-            this.pic43.Location = new System.Drawing.Point(142, 108);
+            this.pic43.Location = new System.Drawing.Point(140, 108);
             this.pic43.Name = "pic43";
             this.pic43.Size = new System.Drawing.Size(37, 36);
             this.pic43.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -718,7 +719,7 @@
             // pic33
             // 
             this.pic33.Image = ((System.Drawing.Image)(resources.GetObject("pic33.Image")));
-            this.pic33.Location = new System.Drawing.Point(82, 108);
+            this.pic33.Location = new System.Drawing.Point(80, 108);
             this.pic33.Name = "pic33";
             this.pic33.Size = new System.Drawing.Size(37, 36);
             this.pic33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -728,9 +729,9 @@
             // pic23
             // 
             this.pic23.Image = ((System.Drawing.Image)(resources.GetObject("pic23.Image")));
-            this.pic23.Location = new System.Drawing.Point(42, 108);
+            this.pic23.Location = new System.Drawing.Point(41, 108);
             this.pic23.Name = "pic23";
-            this.pic23.Size = new System.Drawing.Size(34, 36);
+            this.pic23.Size = new System.Drawing.Size(33, 36);
             this.pic23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic23.TabIndex = 17;
             this.pic23.TabStop = false;
@@ -740,7 +741,7 @@
             this.pic13.Image = ((System.Drawing.Image)(resources.GetObject("pic13.Image")));
             this.pic13.Location = new System.Drawing.Point(3, 108);
             this.pic13.Name = "pic13";
-            this.pic13.Size = new System.Drawing.Size(33, 36);
+            this.pic13.Size = new System.Drawing.Size(32, 36);
             this.pic13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic13.TabIndex = 16;
             this.pic13.TabStop = false;
@@ -748,7 +749,7 @@
             // pic82
             // 
             this.pic82.Image = ((System.Drawing.Image)(resources.GetObject("pic82.Image")));
-            this.pic82.Location = new System.Drawing.Point(364, 54);
+            this.pic82.Location = new System.Drawing.Point(362, 54);
             this.pic82.Name = "pic82";
             this.pic82.Size = new System.Drawing.Size(37, 45);
             this.pic82.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -758,7 +759,7 @@
             // pic72
             // 
             this.pic72.Image = ((System.Drawing.Image)(resources.GetObject("pic72.Image")));
-            this.pic72.Location = new System.Drawing.Point(316, 54);
+            this.pic72.Location = new System.Drawing.Point(314, 54);
             this.pic72.Name = "pic72";
             this.pic72.Size = new System.Drawing.Size(37, 45);
             this.pic72.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -768,7 +769,7 @@
             // pic62
             // 
             this.pic62.Image = ((System.Drawing.Image)(resources.GetObject("pic62.Image")));
-            this.pic62.Location = new System.Drawing.Point(260, 54);
+            this.pic62.Location = new System.Drawing.Point(258, 54);
             this.pic62.Name = "pic62";
             this.pic62.Size = new System.Drawing.Size(37, 45);
             this.pic62.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -778,7 +779,7 @@
             // pic52
             // 
             this.pic52.Image = ((System.Drawing.Image)(resources.GetObject("pic52.Image")));
-            this.pic52.Location = new System.Drawing.Point(205, 54);
+            this.pic52.Location = new System.Drawing.Point(203, 54);
             this.pic52.Name = "pic52";
             this.pic52.Size = new System.Drawing.Size(37, 45);
             this.pic52.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -788,7 +789,7 @@
             // pic42
             // 
             this.pic42.Image = ((System.Drawing.Image)(resources.GetObject("pic42.Image")));
-            this.pic42.Location = new System.Drawing.Point(142, 54);
+            this.pic42.Location = new System.Drawing.Point(140, 54);
             this.pic42.Name = "pic42";
             this.pic42.Size = new System.Drawing.Size(37, 45);
             this.pic42.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -798,7 +799,7 @@
             // pic32
             // 
             this.pic32.Image = ((System.Drawing.Image)(resources.GetObject("pic32.Image")));
-            this.pic32.Location = new System.Drawing.Point(82, 54);
+            this.pic32.Location = new System.Drawing.Point(80, 54);
             this.pic32.Name = "pic32";
             this.pic32.Size = new System.Drawing.Size(37, 45);
             this.pic32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -808,9 +809,9 @@
             // pic22
             // 
             this.pic22.Image = ((System.Drawing.Image)(resources.GetObject("pic22.Image")));
-            this.pic22.Location = new System.Drawing.Point(42, 54);
+            this.pic22.Location = new System.Drawing.Point(41, 54);
             this.pic22.Name = "pic22";
-            this.pic22.Size = new System.Drawing.Size(34, 45);
+            this.pic22.Size = new System.Drawing.Size(33, 45);
             this.pic22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic22.TabIndex = 9;
             this.pic22.TabStop = false;
@@ -820,7 +821,7 @@
             this.pic12.Image = ((System.Drawing.Image)(resources.GetObject("pic12.Image")));
             this.pic12.Location = new System.Drawing.Point(3, 54);
             this.pic12.Name = "pic12";
-            this.pic12.Size = new System.Drawing.Size(33, 45);
+            this.pic12.Size = new System.Drawing.Size(32, 45);
             this.pic12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic12.TabIndex = 8;
             this.pic12.TabStop = false;
@@ -828,7 +829,7 @@
             // pic81
             // 
             this.pic81.Image = ((System.Drawing.Image)(resources.GetObject("pic81.Image")));
-            this.pic81.Location = new System.Drawing.Point(364, 3);
+            this.pic81.Location = new System.Drawing.Point(362, 3);
             this.pic81.Name = "pic81";
             this.pic81.Size = new System.Drawing.Size(37, 45);
             this.pic81.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -838,7 +839,7 @@
             // pic71
             // 
             this.pic71.Image = ((System.Drawing.Image)(resources.GetObject("pic71.Image")));
-            this.pic71.Location = new System.Drawing.Point(316, 3);
+            this.pic71.Location = new System.Drawing.Point(314, 3);
             this.pic71.Name = "pic71";
             this.pic71.Size = new System.Drawing.Size(37, 45);
             this.pic71.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -848,7 +849,7 @@
             // pic61
             // 
             this.pic61.Image = ((System.Drawing.Image)(resources.GetObject("pic61.Image")));
-            this.pic61.Location = new System.Drawing.Point(260, 3);
+            this.pic61.Location = new System.Drawing.Point(258, 3);
             this.pic61.Name = "pic61";
             this.pic61.Size = new System.Drawing.Size(37, 45);
             this.pic61.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -858,7 +859,7 @@
             // pic51
             // 
             this.pic51.Image = ((System.Drawing.Image)(resources.GetObject("pic51.Image")));
-            this.pic51.Location = new System.Drawing.Point(205, 3);
+            this.pic51.Location = new System.Drawing.Point(203, 3);
             this.pic51.Name = "pic51";
             this.pic51.Size = new System.Drawing.Size(37, 45);
             this.pic51.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -868,7 +869,7 @@
             // pic41
             // 
             this.pic41.Image = ((System.Drawing.Image)(resources.GetObject("pic41.Image")));
-            this.pic41.Location = new System.Drawing.Point(142, 3);
+            this.pic41.Location = new System.Drawing.Point(140, 3);
             this.pic41.Name = "pic41";
             this.pic41.Size = new System.Drawing.Size(37, 45);
             this.pic41.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -878,7 +879,7 @@
             // pic31
             // 
             this.pic31.Image = ((System.Drawing.Image)(resources.GetObject("pic31.Image")));
-            this.pic31.Location = new System.Drawing.Point(82, 3);
+            this.pic31.Location = new System.Drawing.Point(80, 3);
             this.pic31.Name = "pic31";
             this.pic31.Size = new System.Drawing.Size(37, 45);
             this.pic31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -888,9 +889,9 @@
             // pic21
             // 
             this.pic21.Image = ((System.Drawing.Image)(resources.GetObject("pic21.Image")));
-            this.pic21.Location = new System.Drawing.Point(42, 3);
+            this.pic21.Location = new System.Drawing.Point(41, 3);
             this.pic21.Name = "pic21";
-            this.pic21.Size = new System.Drawing.Size(34, 45);
+            this.pic21.Size = new System.Drawing.Size(33, 45);
             this.pic21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic21.TabIndex = 1;
             this.pic21.TabStop = false;
@@ -900,40 +901,40 @@
             this.pic11.Image = ((System.Drawing.Image)(resources.GetObject("pic11.Image")));
             this.pic11.Location = new System.Drawing.Point(3, 3);
             this.pic11.Name = "pic11";
-            this.pic11.Size = new System.Drawing.Size(33, 45);
+            this.pic11.Size = new System.Drawing.Size(32, 45);
             this.pic11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic11.TabIndex = 0;
             this.pic11.TabStop = false;
             // 
-            // btnNavClockwise
+            // btnNav1
             // 
-            this.btnNavClockwise.BackColor = System.Drawing.Color.Yellow;
-            this.btnNavClockwise.Location = new System.Drawing.Point(486, 134);
-            this.btnNavClockwise.Name = "btnNavClockwise";
-            this.btnNavClockwise.Size = new System.Drawing.Size(57, 53);
-            this.btnNavClockwise.TabIndex = 11;
-            this.btnNavClockwise.Text = "<-C";
-            this.btnNavClockwise.UseVisualStyleBackColor = false;
-            this.btnNavClockwise.Click += new System.EventHandler(this.BtnNavClockwise_Click);
+            this.btnNav1.BackColor = System.Drawing.Color.Yellow;
+            this.btnNav1.Location = new System.Drawing.Point(486, 134);
+            this.btnNav1.Name = "btnNav1";
+            this.btnNav1.Size = new System.Drawing.Size(57, 53);
+            this.btnNav1.TabIndex = 11;
+            this.btnNav1.Text = "<-AC";
+            this.btnNav1.UseVisualStyleBackColor = false;
+            this.btnNav1.Click += new System.EventHandler(this.BtnNav1_Click);
             // 
-            // btnNavAnticlockwise
+            // btnNav2
             // 
-            this.btnNavAnticlockwise.BackColor = System.Drawing.Color.Yellow;
-            this.btnNavAnticlockwise.Location = new System.Drawing.Point(549, 134);
-            this.btnNavAnticlockwise.Name = "btnNavAnticlockwise";
-            this.btnNavAnticlockwise.Size = new System.Drawing.Size(57, 53);
-            this.btnNavAnticlockwise.TabIndex = 12;
-            this.btnNavAnticlockwise.Text = "AC->";
-            this.btnNavAnticlockwise.UseVisualStyleBackColor = false;
-            this.btnNavAnticlockwise.Click += new System.EventHandler(this.BtnNavAnticlockwise_Click);
+            this.btnNav2.BackColor = System.Drawing.Color.Yellow;
+            this.btnNav2.Location = new System.Drawing.Point(549, 134);
+            this.btnNav2.Name = "btnNav2";
+            this.btnNav2.Size = new System.Drawing.Size(57, 53);
+            this.btnNav2.TabIndex = 12;
+            this.btnNav2.Text = "C->";
+            this.btnNav2.UseVisualStyleBackColor = false;
+            this.btnNav2.Click += new System.EventHandler(this.BtnNav2_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnNavAnticlockwise);
-            this.Controls.Add(this.btnNavClockwise);
+            this.Controls.Add(this.btnNav2);
+            this.Controls.Add(this.btnNav1);
             this.Controls.Add(this.btnQNext);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
@@ -1076,8 +1077,8 @@
         private System.Windows.Forms.PictureBox pic31;
         private System.Windows.Forms.PictureBox pic21;
         private System.Windows.Forms.PictureBox pic11;
-        private System.Windows.Forms.Button btnNavClockwise;
-        private System.Windows.Forms.Button btnNavAnticlockwise;
+        private System.Windows.Forms.Button btnNav1;
+        private System.Windows.Forms.Button btnNav2;
     }
 }
 

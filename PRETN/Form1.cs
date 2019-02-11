@@ -15,9 +15,68 @@ namespace PRETN
         private String msShuffle;
         private String msShuffle2;
         private String msShuffle3;
+        private String msMask;
         private int mnCol = 0, mnRow = 0;
         private int mnSide, mnIndex;
 
+        private void fMask()
+        {
+            String sTwo;
+            int nPos;
+            msMask = null;
+
+            sTwo = "01";
+            for (int i = 1; i <= 64; i++)
+            {
+                  msMask = msMask + sTwo;
+            }
+
+            sTwo = "05";
+            switch (mnSide)
+            {
+                case 1:
+                    for(int i = 1; i <= 8; i++)
+                    {
+                        for (int j = mnIndex; j <= 8; j++)
+                        {
+                            nPos = (i - 1) * 8 + j;
+                            fPlace3(sTwo, nPos);
+                        }
+                    }
+                    break;
+                case 2:
+                    for (int i = mnIndex; i <= 8; i++)
+                    {
+                        for (int j = 1; j <= 8; j++)
+                        {
+                            nPos = (i - 1) * 8 + j;
+                            fPlace3(sTwo, nPos);
+                        }
+                    }
+                    break;
+                case 3:
+                    for (int i = 1; i <= 8; i++)
+                    {
+                        for (int j = mnIndex; j <= 8; j++)
+                        {
+                            nPos = (i - 1) * 8 + j;
+                            fPlace3(sTwo, nPos);
+                        }
+                    }
+                    break;
+                default:
+                    for (int i = mnIndex; i <= 8; i++)
+                    {
+                        for (int j = 1; j <= 8; j++)
+                        {
+                            nPos = (i - 1) * 8 + j;
+                            fPlace3(sTwo, nPos);
+                        }
+                    }
+                    break;
+
+            }
+        }
         private void fNav(int nMode)
         {
             if (nMode == 1)
@@ -169,6 +228,8 @@ namespace PRETN
                 }
 
             }
+
+            fMask();
             fUpdateDisplay();
         }
         private void fKnobCoordinantes()
@@ -326,10 +387,11 @@ namespace PRETN
             msShuffle = "01020304050607080910111213141516171819202122232425262728293021323334353637383940414243444546474849505152535455565758596061626364";
             msShuffle2 = null;
             msShuffle3 = null;
+            msMask = null;
 
+            sTwo = "01";
             for (int i = 1; i <= 64; i++)
             {
-                sTwo = "01";
                 msShuffle2 = msShuffle2 + sTwo;
                 msShuffle3 = msShuffle3 + sTwo;
             }
@@ -341,22 +403,12 @@ namespace PRETN
                 fPlace("02", nPos);
             }
 
-            for(int i = 1; i <= 8; i++)
-            {
-                for (int j = 1; j <= 8; j++)
-                {
-                    nPos = (i - 1) * 8 + j;
-                    nType = fHoletype(msShuffle2, nPos);
-                    sTwo = "0" + Convert.ToString(nType);
-                    fPlace2(sTwo, nPos);
-                }
-            }
             for (int i = 1; i <= 8; i++)
             {
                 for (int j = 1; j <= 8; j++)
                 {
                     nPos = (i - 1) * 8 + j;
-                    nType = fHoletype(msShuffle3, nPos);
+                    nType = fHoletype(msShuffle2, nPos);
                     if (nType == 2)
                     {
                         fSpill(i, j);
@@ -366,6 +418,8 @@ namespace PRETN
 
             mnSide = rnd1.Next(1, 5);
             mnIndex = rnd1.Next(1, 9);
+            fKnobCoordinantes();
+            fMask();
 
             fUpdateDisplay();
 
@@ -377,210 +431,210 @@ namespace PRETN
             int nType, nRotate = 1;
 
             //1
-            nType = fHoletype(msShuffle2, 1);
+            nType = fHoletype2(msShuffle2, 1);
             fPeek(nType, nRotate, ref _pic);
             pic11.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 2);
+            nType = fHoletype2(msShuffle2, 2);
             fPeek(nType, nRotate, ref _pic);
             pic12.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 3);
+            nType = fHoletype2(msShuffle2, 3);
             fPeek(nType, nRotate, ref _pic);
             pic13.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 4);
+            nType = fHoletype2(msShuffle2, 4);
             fPeek(nType, nRotate, ref _pic);
             pic14.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 5);
+            nType = fHoletype2(msShuffle2, 5);
             fPeek(nType, nRotate, ref _pic);
             pic15.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 6);
+            nType = fHoletype2(msShuffle2, 6);
             fPeek(nType, nRotate, ref _pic);
             pic16.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 7);
+            nType = fHoletype2(msShuffle2, 7);
             fPeek(nType, nRotate, ref _pic);
             pic17.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 8);
+            nType = fHoletype2(msShuffle2, 8);
             fPeek(nType, nRotate, ref _pic);
             pic18.Image = _pic.Image;
 
             //2
-            nType = fHoletype(msShuffle2, 9);
+            nType = fHoletype2(msShuffle2, 9);
             fPeek(nType, nRotate, ref _pic);
             pic21.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 10);
+            nType = fHoletype2(msShuffle2, 10);
             fPeek(nType, nRotate, ref _pic);
             pic22.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 11);
+            nType = fHoletype2(msShuffle2, 11);
             fPeek(nType, nRotate, ref _pic);
             pic23.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 12);
+            nType = fHoletype2(msShuffle2, 12);
             fPeek(nType, nRotate, ref _pic);
             pic24.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 13);
+            nType = fHoletype2(msShuffle2, 13);
             fPeek(nType, nRotate, ref _pic);
             pic25.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 14);
+            nType = fHoletype2(msShuffle2, 14);
             fPeek(nType, nRotate, ref _pic);
             pic26.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 15);
+            nType = fHoletype2(msShuffle2, 15);
             fPeek(nType, nRotate, ref _pic);
             pic27.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 16);
+            nType = fHoletype2(msShuffle2, 16);
             fPeek(nType, nRotate, ref _pic);
             pic28.Image = _pic.Image;
 
             //3
-            nType = fHoletype(msShuffle2, 17);
+            nType = fHoletype2(msShuffle2, 17);
             fPeek(nType, nRotate, ref _pic);
             pic31.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 18);
+            nType = fHoletype2(msShuffle2, 18);
             fPeek(nType, nRotate, ref _pic);
             pic32.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 19);
+            nType = fHoletype2(msShuffle2, 19);
             fPeek(nType, nRotate, ref _pic);
             pic33.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 20);
+            nType = fHoletype2(msShuffle2, 20);
             fPeek(nType, nRotate, ref _pic);
             pic34.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 21);
+            nType = fHoletype2(msShuffle2, 21);
             fPeek(nType, nRotate, ref _pic);
             pic35.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 22);
+            nType = fHoletype2(msShuffle2, 22);
             fPeek(nType, nRotate, ref _pic);
             pic36.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 23);
+            nType = fHoletype2(msShuffle2, 23);
             fPeek(nType, nRotate, ref _pic);
             pic37.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 24);
+            nType = fHoletype2(msShuffle2, 24);
             fPeek(nType, nRotate, ref _pic);
             pic38.Image = _pic.Image;
 
             //4
-            nType = fHoletype(msShuffle2, 25);
+            nType = fHoletype2(msShuffle2, 25);
             fPeek(nType, nRotate, ref _pic);
             pic41.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 26);
+            nType = fHoletype2(msShuffle2, 26);
             fPeek(nType, nRotate, ref _pic);
             pic42.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 27);
+            nType = fHoletype2(msShuffle2, 27);
             fPeek(nType, nRotate, ref _pic);
             pic43.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 28);
+            nType = fHoletype2(msShuffle2, 28);
             fPeek(nType, nRotate, ref _pic);
             pic44.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 29);
+            nType = fHoletype2(msShuffle2, 29);
             fPeek(nType, nRotate, ref _pic);
             pic45.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 30);
+            nType = fHoletype2(msShuffle2, 30);
             fPeek(nType, nRotate, ref _pic);
             pic46.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 31);
+            nType = fHoletype2(msShuffle2, 31);
             fPeek(nType, nRotate, ref _pic);
             pic47.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 32);
+            nType = fHoletype2(msShuffle2, 32);
             fPeek(nType, nRotate, ref _pic);
             pic48.Image = _pic.Image;
 
             //5
-            nType = fHoletype(msShuffle2, 33);
+            nType = fHoletype2(msShuffle2, 33);
             fPeek(nType, nRotate, ref _pic);
             pic51.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 34);
+            nType = fHoletype2(msShuffle2, 34);
             fPeek(nType, nRotate, ref _pic);
             pic52.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 35);
+            nType = fHoletype2(msShuffle2, 35);
             fPeek(nType, nRotate, ref _pic);
             pic53.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 36);
+            nType = fHoletype2(msShuffle2, 36);
             fPeek(nType, nRotate, ref _pic);
             pic54.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 37);
+            nType = fHoletype2(msShuffle2, 37);
             fPeek(nType, nRotate, ref _pic);
             pic55.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 38);
+            nType = fHoletype2(msShuffle2, 38);
             fPeek(nType, nRotate, ref _pic);
             pic56.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 39);
+            nType = fHoletype2(msShuffle2, 39);
             fPeek(nType, nRotate, ref _pic);
             pic57.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 40);
+            nType = fHoletype2(msShuffle2, 40);
             fPeek(nType, nRotate, ref _pic);
             pic58.Image = _pic.Image;
 
             //6
-            nType = fHoletype(msShuffle2, 41);
+            nType = fHoletype2(msShuffle2, 41);
             fPeek(nType, nRotate, ref _pic);
             pic61.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 42);
+            nType = fHoletype2(msShuffle2, 42);
             fPeek(nType, nRotate, ref _pic);
             pic62.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 43);
+            nType = fHoletype2(msShuffle2, 43);
             fPeek(nType, nRotate, ref _pic);
             pic63.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 44);
+            nType = fHoletype2(msShuffle2, 44);
             fPeek(nType, nRotate, ref _pic);
             pic64.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 45);
+            nType = fHoletype2(msShuffle2, 45);
             fPeek(nType, nRotate, ref _pic);
             pic65.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 46);
+            nType = fHoletype2(msShuffle2, 46);
             fPeek(nType, nRotate, ref _pic);
             pic66.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 47);
+            nType = fHoletype2(msShuffle2, 47);
             fPeek(nType, nRotate, ref _pic);
             pic67.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 48);
+            nType = fHoletype2(msShuffle2, 48);
             fPeek(nType, nRotate, ref _pic);
             pic68.Image = _pic.Image;
 
             //7
-            nType = fHoletype(msShuffle2, 49);
+            nType = fHoletype2(msShuffle2, 49);
             fPeek(nType, nRotate, ref _pic);
             pic71.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 50);
+            nType = fHoletype2(msShuffle2, 50);
             fPeek(nType, nRotate, ref _pic);
             pic72.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 51);
+            nType = fHoletype2(msShuffle2, 51);
             fPeek(nType, nRotate, ref _pic);
             pic73.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 52);
+            nType = fHoletype2(msShuffle2, 52);
             fPeek(nType, nRotate, ref _pic);
             pic74.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 53);
+            nType = fHoletype2(msShuffle2, 53);
             fPeek(nType, nRotate, ref _pic);
             pic75.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 54);
+            nType = fHoletype2(msShuffle2, 54);
             fPeek(nType, nRotate, ref _pic);
             pic76.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 55);
+            nType = fHoletype2(msShuffle2, 55);
             fPeek(nType, nRotate, ref _pic);
             pic77.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 56);
+            nType = fHoletype2(msShuffle2, 56);
             fPeek(nType, nRotate, ref _pic);
             pic78.Image = _pic.Image;
 
             //8
-            nType = fHoletype(msShuffle2, 57);
+            nType = fHoletype2(msShuffle2, 57);
             fPeek(nType, nRotate, ref _pic);
             pic81.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 58);
+            nType = fHoletype2(msShuffle2, 58);
             fPeek(nType, nRotate, ref _pic);
             pic82.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 59);
+            nType = fHoletype2(msShuffle2, 59);
             fPeek(nType, nRotate, ref _pic);
             pic83.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 60);
+            nType = fHoletype2(msShuffle2, 60);
             fPeek(nType, nRotate, ref _pic);
             pic84.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 61);
+            nType = fHoletype2(msShuffle2, 61);
             fPeek(nType, nRotate, ref _pic);
             pic85.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 62);
+            nType = fHoletype2(msShuffle2, 62);
             fPeek(nType, nRotate, ref _pic);
             pic86.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 63);
+            nType = fHoletype2(msShuffle2, 63);
             fPeek(nType, nRotate, ref _pic);
             pic87.Image = _pic.Image;
-            nType = fHoletype(msShuffle2, 64);
+            nType = fHoletype2(msShuffle2, 64);
             fPeek(nType, nRotate, ref _pic);
             pic88.Image = _pic.Image;
 
@@ -923,11 +977,32 @@ namespace PRETN
         {
             msShuffle3 = msShuffle3.Substring(0, nPos * 2 - 2) + sText + msShuffle3.Substring(nPos * 2, (64 - nPos) * 2);
         }
+        private void fPlace3(String sText, int nPos)
+        {
+            msMask = msMask.Substring(0, nPos * 2 - 2) + sText + msMask.Substring(nPos * 2, (64 - nPos) * 2);
+        }
+
         private int fHoletype(String sShuffle, int nSquare)
         {
             int nType = 0;
 
             nType = Convert.ToInt32(sShuffle.Substring(nSquare * 2 - 2, 2));
+            return nType;
+        }
+        private int fHoletype2(String sShuffle, int nSquare)
+        {
+            int nType = 0,nType2,nType3;
+
+            nType = Convert.ToInt32(sShuffle.Substring(nSquare * 2 - 2, 2));
+            nType2 = Convert.ToInt32(msShuffle3.Substring(nSquare * 2 - 2, 2));
+            nType3 = Convert.ToInt32(msMask.Substring(nSquare * 2 - 2, 2));
+            if (nType3 == 5)
+            {
+                if (nType2 == 3)
+                {
+                    return 3;
+                }
+            }
             return nType;
         }
 
@@ -965,6 +1040,12 @@ namespace PRETN
             PictureBox picture5 = new PictureBox
             {
                 Name = "pictureBox5",
+                Image = Image.FromFile(@"F mask.png"),
+                SizeMode = PictureBoxSizeMode.StretchImage
+            };
+            PictureBox picture6 = new PictureBox
+            {
+                Name = "pictureBox6",
                 Image = Image.FromFile(@"F NullGate.png"),
                 SizeMode = PictureBoxSizeMode.StretchImage
             };
@@ -983,8 +1064,11 @@ namespace PRETN
                 case 4:
                     _pic2 = picture4;
                     break;
-                default:
+                case 5:
                     _pic2 = picture5;
+                    break;
+                default:
+                    _pic2 = picture6;
                     break;
             }
             for (int i = 1; i <= nRotate - 1; i++)
@@ -994,14 +1078,19 @@ namespace PRETN
 
         }
 
-        private void BtnNavClockwise_Click(object sender, EventArgs e)
+        private void BtnNav1_Click(object sender, EventArgs e)
         {
             fNav(1);
         }
 
-        private void BtnNavAnticlockwise_Click(object sender, EventArgs e)
+        private void BtnNav2_Click(object sender, EventArgs e)
         {
             fNav(2);
+        }
+
+        private void TableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         public Form1()
